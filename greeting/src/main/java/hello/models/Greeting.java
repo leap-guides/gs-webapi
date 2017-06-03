@@ -2,15 +2,15 @@ package hello.models;
 
 public class Greeting {
 
-    private final String id;
+    private final int    id;
     private final String message;
 
-    public Greeting(String id, String message) {
+    public Greeting(int id, String message) {
         this.id = id;
         this.message = message;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
