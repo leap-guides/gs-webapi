@@ -11,6 +11,7 @@ public class Global extends App {
 
     @Override
     protected void configure(WebConfigurator c) {
+        //todo : change the api name 'hello' to yours.
         apis.add("hello", "/");
     }
 }
