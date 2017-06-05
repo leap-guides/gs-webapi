@@ -1,10 +1,7 @@
 package hello.controllers;
 
 import hello.models.User;
-import leap.web.annotation.http.DELETE;
-import leap.web.annotation.http.GET;
-import leap.web.annotation.http.POST;
-import leap.web.annotation.http.PUT;
+import leap.web.annotation.http.*;
 import leap.web.api.mvc.ApiResponse;
 import leap.web.api.mvc.ModelController;
 import leap.web.api.mvc.params.DeleteOptions;
@@ -24,7 +21,7 @@ public class UserController extends ModelController<User> {
         return get(id);
     }
 
-    @PUT("/{id}")
+    @PATCH("/{id}")
     public ApiResponse updateUser(String id, Partial<User> user) {
         return updatePartial(id, user);
     }
