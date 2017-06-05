@@ -5,7 +5,7 @@ import leap.orm.annotation.Id;
 import leap.orm.annotation.Table;
 import leap.orm.model.Model;
 
-@Table("groups")
+@Table(name = "groups", autoCreate = true)
 public class Group extends Model {
 
     @Id(generator = "shortid")
