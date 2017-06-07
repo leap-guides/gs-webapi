@@ -3,17 +3,11 @@
     
     <base-package>hello</base-package>
 
-    <properties>
-        <property name="jdbc.driverClassName">org.h2.Driver</property>
-        <property name="jdbc.url">jdbc:h2:./target/test;DB_CLOSE_ON_EXIT=FALSE</property>
-        <property name="jdbc.username">sa</property>
-    </properties>
-
     <properties prefix="oauth2">
         <property name="enabled"        value="true"/>
         <property name="server_url"     value="http://localhost:8088"/>
         <property name="client_id"      value="client1"/>
-        <property name="client_secret"  value="secret1"/>
-    </properties>    
+        <property name="client_secret"  value="secret2"/>
+    </properties>
 
 </config>
