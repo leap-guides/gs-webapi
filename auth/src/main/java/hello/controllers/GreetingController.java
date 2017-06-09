@@ -50,6 +50,11 @@ public class GreetingController extends ApiController {
         return ApiResponse.of(map(SecurityContext.user()));
     }
 
+    @GET("/perm")
+    public ApiResponse<String> perm() {
+        return ApiResponse.of("OK");
+    }
+
     protected Map<String,Object> map(UserPrincipal user) {
         Map<String,Object> map = new LinkedHashMap<>();
 
