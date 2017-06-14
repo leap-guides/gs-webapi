@@ -18,6 +18,7 @@ public class OperationLog extends Model {
     protected String    userId;
     protected String    loginName;
     protected boolean   success;
+    protected Integer   status;
     protected Timestamp timestamp;
 
     @Id
@@ -90,6 +91,15 @@ public class OperationLog extends Model {
 
     public void setSuccess(boolean success) {
         this.success = success;
+    }
+
+    @Column
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     @Column

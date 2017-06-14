@@ -30,7 +30,7 @@ public class OperationLogInterceptor implements ActionInterceptor {
             }
 
             if(op.getMethod().isGet()) {
-                //do not save the operation for query.
+                //do not save the operation log for query.
                 return;
             }
 
@@ -43,6 +43,10 @@ public class OperationLogInterceptor implements ActionInterceptor {
             log.setUserId(user.getId().toString());
             log.setLoginName(user.getLoginName());
             log.setTimestamp(new Timestamp(System.currentTimeMillis()));
+
+            if(null != execution.getStatus()) {
+                log.setStatus(execution.getStatus().value());
+            }
 
             if(!Strings.isEmpty(log.getTitle())) {
                 log.setTitle(op.getSummary());
