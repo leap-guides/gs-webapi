@@ -16,4 +16,8 @@
         <property name="client_secret"  value="secret1"/>
     </properties>
 
+    <properties prefix="orm">
+        <property name="query_filter.enabled" value="true"/>
+    </properties>
+
 </config>

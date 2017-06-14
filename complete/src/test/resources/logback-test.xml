@@ -7,7 +7,7 @@
 		</encoder>
 	</appender>
 
-    <logger name="leap" level="INFO"/>
+    <logger name="leap"  level="DEBUG"/>
 	<logger name="hello" level="DEBUG"/>
  	 
 	<root level="WARN">

@@ -14,4 +14,6 @@
     <bean type="leap.oauth2.webapp.user.UserDetailsLookup"
           class="hello.beans.RemoteUserDetailsLookup" override="true" primary="true"/>
 
+    <bean name="filter" type="leap.orm.sql.SqlTagProcessor" class="hello.beans.SecurityQueryFilter"/>
+
 </beans>

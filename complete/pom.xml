@@ -55,5 +55,19 @@
             <artifactId>h2</artifactId>
             <version>1.3.172</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.leapframework</groupId>
+            <artifactId>leap-junit</artifactId>
+            <version>${leap.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
 	</dependencies>
 </project>
