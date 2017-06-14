@@ -1,6 +1,7 @@
 package hello.controllers;
 
 import hello.models.Greeting;
+import leap.core.doc.annotation.Doc;
 import leap.core.security.SecurityContext;
 import leap.core.security.UserPrincipal;
 import leap.core.security.annotation.AllowAnonymous;
@@ -58,11 +59,13 @@ public class GreetingController extends ApiController {
     }
 
     @POST("/test_log_ok")
+    @Doc(summary = "测试成功操作")
     public ApiResponse testLogOk() {
         return ApiResponse.OK;
     }
 
     @POST("/test_log_err")
+    @Doc(summary = "测试失败操作")
     public ApiResponse testLogErr() {
         return ApiResponse.err(HTTP.Status.BAD_REQUEST, "err");
     }
