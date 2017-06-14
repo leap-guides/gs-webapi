@@ -8,6 +8,9 @@
         <property name="password"        value="${jdbc.password}" />
     </bean>
 
+    <bean type="leap.web.action.ActionInterceptor" class="hello.interceptors.PermissionInterceptor"/>
+    <bean type="leap.web.action.ActionInterceptor" class="hello.interceptors.OperationLogInterceptor"/>
+
     <bean type="leap.oauth2.webapp.user.UserDetailsLookup"
           class="hello.beans.RemoteUserDetailsLookup" override="true" primary="true"/>
 

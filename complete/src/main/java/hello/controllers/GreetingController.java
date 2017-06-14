@@ -5,9 +5,11 @@ import leap.core.security.SecurityContext;
 import leap.core.security.UserPrincipal;
 import leap.core.security.annotation.AllowAnonymous;
 import leap.core.validation.annotations.Required;
+import leap.lang.http.HTTP;
 import leap.web.Request;
 import leap.web.annotation.DefaultValue;
 import leap.web.annotation.http.GET;
+import leap.web.annotation.http.POST;
 import leap.web.api.mvc.ApiController;
 import leap.web.api.mvc.ApiResponse;
 
@@ -53,6 +55,16 @@ public class GreetingController extends ApiController {
     @GET("/perm")
     public ApiResponse<String> perm() {
         return ApiResponse.of("OK");
+    }
+
+    @POST("/test_log_ok")
+    public ApiResponse testLogOk() {
+        return ApiResponse.OK;
+    }
+
+    @POST("/test_log_err")
+    public ApiResponse testLogErr() {
+        return ApiResponse.err(HTTP.Status.BAD_REQUEST, "err");
     }
 
     protected Map<String,Object> map(UserPrincipal user) {
