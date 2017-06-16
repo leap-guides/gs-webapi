@@ -7,5 +7,14 @@
         <property name="username"        value="${jdbc.username}" />
         <property name="password"        value="${jdbc.password}" />
     </bean>
-    
+
+    <bean type="leap.web.action.ActionInterceptor"
+          class="hello.interceptors.OpLogInterceptor"/>
+
+    <bean type="leap.web.action.ActionInterceptor"
+          class="hello.interceptors.OpPermInterceptor"/>
+
+    <bean name="filter" type="leap.orm.sql.SqlTagProcessor"
+          class="hello.beans.SecurityQueryFilter"/>
+
 </beans>

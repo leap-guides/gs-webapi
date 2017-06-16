@@ -1,5 +1,7 @@
 package hello.models;
 
+import leap.lang.meta.annotation.Filterable;
+import leap.lang.meta.annotation.Sortable;
 import leap.orm.annotation.Column;
 import leap.orm.annotation.Id;
 import leap.orm.annotation.Table;
@@ -7,10 +9,10 @@ import leap.orm.model.Model;
 
 @Table(name = "groups", autoCreate = true)
 public class Group extends Model {
-
     @Id(generator = "shortid")
     protected String id;
-
+    @Sortable
+    @Filterable
     @Column
     protected String name;
 

@@ -9,11 +9,16 @@
         <property name="jdbc.username">sa</property>
     </properties>
 
+    <!-- http://localhost:8088/oauth2/authorize?response_type=token&client_id=client1&client_secret=secret1&redirect_uri=/show_access_token -->
     <properties prefix="oauth2">
         <property name="enabled"        value="true"/>
         <property name="server_url"     value="http://localhost:8088"/>
         <property name="client_id"      value="client1"/>
         <property name="client_secret"  value="secret1"/>
-    </properties>    
-
+    </properties>
+    <!-- use sql tag process -->
+    <properties prefix="orm">
+        <property name="query_filter.enabled" value="true"/>
+    </properties>
+    
 </config>

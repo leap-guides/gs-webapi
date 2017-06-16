@@ -11,6 +11,6 @@ public class Global extends App {
 
     @Override
     protected void configure(WebConfigurator c) {
-        apis.add("users", "/").enableRestd();
+        // apis.add("users", "/").enableRestd();
     }
 }

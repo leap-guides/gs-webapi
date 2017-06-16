@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<apis xmlns="http://www.leapframework.org/schema/webapi">
+    <api name="users" base-path="/" restd-enabled="true">
+        <restd readonly="false"></restd>
+    </api>
+</apis>

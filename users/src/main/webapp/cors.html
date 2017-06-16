@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CORS测试</title>
+</head>
+<body>
+    <!-- 
+        1.修改url和at两个变量的参数
+        2.直接使用浏览器打开这个文件（如打开地址：file:///D:/workspace/users/src/main/webapp/cors.html）
+        3.点击测试按钮，就可以发送一个跨域请求了
+    -->
+    <button id="cors" >测试</button>
+
+    <script type="text/javascript">
+        function cors() {
+            var url = "http://localhost:8080/user";
+            var at = "abc";
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if(xhr.status>=200&&xhr.status<300){
+                    debugger;
+                    var data = xhr.responseText;
+                    console.log(data);
+                    alert(data);
+                }
+            };
+            xhr.open("POST",url);
+            xhr.setRequestHeader("Authorization","Bearer " + at);
+            xhr.send("{'name':'user2'}")
+        }
+        document.getElementById("cors").onclick=cors;
+    </script>
+</body>
+</html>
